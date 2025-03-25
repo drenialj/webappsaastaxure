@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "buildCommand": "cd Desktop/taxuresaas && npm install && npm run build",
+  "outputDirectory": "Desktop/taxuresaas/.next",
+  "installCommand": null
 } 
