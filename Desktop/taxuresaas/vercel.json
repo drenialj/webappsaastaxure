@@ -1,7 +1,8 @@
 {
-  "buildCommand": "npm install && npm run build",
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "npm install autoprefixer postcss tailwindcss && npm run build",
   "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": null,
   "outputDirectory": ".next"
 } 
