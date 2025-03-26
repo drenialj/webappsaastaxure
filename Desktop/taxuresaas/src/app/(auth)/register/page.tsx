@@ -28,12 +28,7 @@ export default function RegisterPage() {
     const kanzleiCode = formData.get("kanzleiCode") as string
 
     try {
-      await register({
-        email,
-        password,
-        role,
-        ...(role === "Mandant" && { kanzleiCode })
-      })
+      await register(email, password, role)
       router.push("/dashboard")
     } catch (err: any) {
       setError(err.message)
