@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF ."
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -8,4 +9,12 @@
 [build.environment]
   NEXT_USE_NETLIFY_EDGE = "true"
   NODE_VERSION = "18"
-  NEXT_PUBLIC_API_URL = "https://api.example.com" # Optional - Falls Sie eine API-URL haben 
+  NEXT_PUBLIC_API_URL = "https://api.example.com" # Optional - Falls Sie eine API-URL haben
+  NPM_FLAGS = "--legacy-peer-deps"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block" 
