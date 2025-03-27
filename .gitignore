@@ -1,0 +1,62 @@
+# Node and Next.js build artifacts
+node_modules/
+.next/
+
+# Environment files
+.env*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and editor-specific files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Static cache
+out/
+
+# TypeScript
+*.tsbuildinfo
+
+# Test coverage
+coverage/
+
+# Next.js cache
+.next/cache/
+
+# Docker
+docker-compose.override.yml
+
+# Local environment overrides
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Misc
+*.bak
+*.tmp
+
+# Ignore build outputs
+build/
+
+# Ignore lock files (if using only one package manager)
+yarn.lock
+package-lock.json
+
+# Ignore generated files
+*.log
+*.cache
+.cache-loader
+
+# Ignore vercel and other deployment configs
+.vercel/
+*.env.production
+*.env.development
